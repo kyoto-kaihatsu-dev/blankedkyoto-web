@@ -46,7 +46,47 @@ h1 {
   margin-bottom: 32px;
 }
 
+h2 {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin: 56px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e1da;
+}
+
 main p { margin-bottom: 20px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 8px;
+  border-bottom: 1px solid #e5e1da;
+  vertical-align: top;
+}
+
+th { font-weight: normal; color: #6b6459; white-space: nowrap; }
+
+.note { font-size: 14px; color: #6b6459; }
+
+.cta {
+  display: inline-block;
+  margin: 8px 12px 12px 0;
+  padding: 14px 28px;
+  border: 1px solid #2b2b2b;
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.cta:hover { background: #2b2b2b; color: #fbfaf8; }
 
 footer {
   border-top: 1px solid #e5e1da;
