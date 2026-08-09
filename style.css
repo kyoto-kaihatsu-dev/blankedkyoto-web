@@ -1,29 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  background: #faf8f4;
+  color: #2b2622;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 32px;
+  border-bottom: 1px solid #e3ded5;
+}
+header > a { font-size: 18px; letter-spacing: 0.12em; }
+nav a { margin-left: 20px; font-size: 14px; }
+a { color: #2b2622; text-decoration: none; }
+nav a:hover, header > a:hover { opacity: 0.6; }
+
+main { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+
+h1 { font-size: 30px; font-weight: normal; letter-spacing: 0.08em; margin-bottom: 32px; }
+h2 { font-size: 21px; font-weight: normal; letter-spacing: 0.06em; margin: 64px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #e3ded5; }
+h3 { font-size: 17px; font-weight: normal; margin-bottom: 8px; }
+p { margin-bottom: 18px; }
+
 img { max-width: 100%; height: auto; display: block; }
 
-.hero img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  object-position: center;
-}
+.hero { width: 100%; margin-bottom: 40px; }
+.hero img { width: 100%; height: 420px; object-fit: cover; object-position: center; }
 
-.grid img, .grid figure img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-}
+figure { margin-bottom: 28px; }
+figcaption { font-size: 13px; color: #7a736a; margin-top: 8px; }
 
-.course > img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  object-position: center;
-  background: #fff;
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin: 24px 0 40px; }
+.grid img { width: 100%; height: 260px; object-fit: cover; object-position: center; }
+
+.course { margin-bottom: 56px; }
+.course > img { width: 100%; height: 340px; object-fit: cover; object-position: center; background: #fff; margin-bottom: 16px; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid #e3ded5; font-weight: normal; }
+th { width: 34%; color: #7a736a; font-size: 15px; }
+
+.note { font-size: 14px; color: #7a736a; }
+
+.cta {
+  display: inline-block;
+  margin: 8px 12px 8px 0;
+  padding: 12px 28px;
+  border: 1px solid #2b2622;
+  font-size: 14px;
+  letter-spacing: 0.06em;
 }
+.cta:hover { background: #2b2622; color: #faf8f4; }
+
+footer {
+  border-top: 1px solid #e3ded5;
+  padding: 32px;
+  font-size: 13px;
+  color: #7a736a;
+  text-align: center;
+}
+footer p { margin-bottom: 6px; }
 
 @media (max-width: 600px) {
+  header { padding: 18px 20px; }
+  nav a { margin: 0 14px 0 0; }
+  main { padding: 36px 20px 60px; }
+  h1 { font-size: 24px; }
+  .grid { grid-template-columns: 1fr; }
   .hero img { height: 240px; }
-  .grid img, .grid figure img { height: 200px; }
+  .grid img { height: 200px; }
   .course > img { height: 220px; }
 }
