@@ -40,7 +40,7 @@
 
 <url>
 <loc>https://blankedkyoto.com/faq.html</loc>
-<lastmod>2026-08-13</lastmod>
+<lastmod>2026-08-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
@@ -94,7 +94,7 @@
 
 <url>
 <loc>https://blankedkyoto.com/en/faq.html</loc>
-<lastmod>2026-08-13</lastmod>
+<lastmod>2026-08-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
@@ -109,5 +109,4 @@
 <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
 </url>
-
 </urlset>
