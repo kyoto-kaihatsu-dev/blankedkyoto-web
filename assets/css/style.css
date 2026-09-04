@@ -31,6 +31,7 @@ h3 { font-size: 17px; font-weight: normal; margin-bottom: 8px; }
 p { margin-bottom: 18px; }
 
 img { max-width: 100%; height: auto; display: block; }
+picture { display: block; }
 
 .hero { width: 100%; margin-bottom: 40px; }
 .hero img { width: 100%; height: 420px; object-fit: cover; object-position: center; }
@@ -42,7 +43,7 @@ figcaption { font-size: 13px; color: #7a736a; margin-top: 8px; }
 .grid img { width: 100%; height: 260px; object-fit: cover; object-position: center; }
 
 .course { margin-bottom: 56px; }
-.course > img { width: 100%; height: 340px; object-fit: cover; object-position: center; background: #fff; margin-bottom: 16px; }
+.course > picture > img { width: 100%; height: 340px; object-fit: cover; object-position: center; background: #fff; margin-bottom: 16px; }
 
 table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
 th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid #e3ded5; font-weight: normal; }
@@ -78,5 +79,5 @@ footer p { margin-bottom: 6px; }
   .grid { grid-template-columns: 1fr; }
   .hero img { height: 240px; }
   .grid img { height: 200px; }
-  .course > img { height: 220px; }
+  .course > picture > img { height: 220px; }
 }
