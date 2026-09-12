@@ -109,4 +109,22 @@
 <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
 </url>
+
+<url>
+  <loc>https://blankedkyoto.com/about.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/about.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/about.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/about.html"/>
+</url>
+
+<url>
+  <loc>https://blankedkyoto.com/en/about.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/about.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/about.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/about.html"/>
+</url>
 </urlset>
