@@ -109,7 +109,6 @@
 <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
 </url>
-</urlset>
 
 <url>
   <loc>https://blankedkyoto.com/about.html</loc>
@@ -130,3 +129,4 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/about.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/about.html"/>
 </url>
+</urlset>
