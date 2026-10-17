@@ -1,4 +1,7 @@
+# BLANKED KYOTO – https://blankedkyoto.com
+# All crawlers, including AI search / answer engines, are welcome.
 User-agent: *
 Allow: /
+Disallow: /tools/
 
 Sitemap: https://blankedkyoto.com/sitemap.xml

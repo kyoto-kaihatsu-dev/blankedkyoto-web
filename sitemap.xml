@@ -3,116 +3,88 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 <url>
-<loc>https://blankedkyoto.com/</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/"/>
+  <loc>https://blankedkyoto.com/</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/experience.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/experience.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/experience.html"/>
+  <loc>https://blankedkyoto.com/en/</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/products.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/products.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/products.html"/>
+  <loc>https://blankedkyoto.com/experience.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/experience.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/experience.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/experience.html"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/access.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.7</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/access.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/access.html"/>
+  <loc>https://blankedkyoto.com/en/experience.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/experience.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/experience.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/experience.html"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/faq.html</loc>
-<lastmod>2026-08-14</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/faq.html"/>
+  <loc>https://blankedkyoto.com/booking.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/booking.html"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/booking.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
+  <loc>https://blankedkyoto.com/en/booking.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/booking.html"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/en/</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/"/>
+  <loc>https://blankedkyoto.com/faq.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/faq.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/faq.html"/>
 </url>
 
 <url>
-<loc>https://blankedkyoto.com/en/experience.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/experience.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/experience.html"/>
-</url>
-
-<url>
-<loc>https://blankedkyoto.com/en/products.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/products.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/products.html"/>
-</url>
-
-<url>
-<loc>https://blankedkyoto.com/en/access.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.7</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/access.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/access.html"/>
-</url>
-
-<url>
-<loc>https://blankedkyoto.com/en/faq.html</loc>
-<lastmod>2026-08-14</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/faq.html"/>
-</url>
-
-<url>
-<loc>https://blankedkyoto.com/en/booking.html</loc>
-<lastmod>2026-08-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-<xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/booking.html"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/booking.html"/>
+  <loc>https://blankedkyoto.com/en/faq.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/faq.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/faq.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/faq.html"/>
 </url>
 
 <url>
   <loc>https://blankedkyoto.com/about.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-09-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/about.html"/>
@@ -122,11 +94,52 @@
 
 <url>
   <loc>https://blankedkyoto.com/en/about.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-09-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/about.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/about.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/about.html"/>
 </url>
+
+<url>
+  <loc>https://blankedkyoto.com/access.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.7</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/access.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/access.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/access.html"/>
+</url>
+
+<url>
+  <loc>https://blankedkyoto.com/en/access.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.7</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/access.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/access.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/access.html"/>
+</url>
+
+<url>
+  <loc>https://blankedkyoto.com/products.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/products.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/products.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/products.html"/>
+</url>
+
+<url>
+  <loc>https://blankedkyoto.com/en/products.html</loc>
+  <lastmod>2026-09-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/products.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/products.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/products.html"/>
+</url>
+
 </urlset>
