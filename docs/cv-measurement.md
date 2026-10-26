@@ -13,6 +13,7 @@
 | `assets/js/consent.js` | 同意バナー（JA/EN 自動切替）。初回のみ表示 |
 | `assets/css/style.css` | `.consent*` バナーのスタイル |
 | `privacy.html` / `en/privacy.html` | プライバシーポリシー（計測・Cookie・同意の説明）。全ページのフッターからリンク |
+| `thanks.html` / `en/thanks.html` | 予約完了ページ（noindex）。`appointment_scheduled` の発火地点 |
 | 各 HTML `<head>` 冒頭 | `window.BK_OAIQ = { pixelId, debug }` と `oaiq.js` の読み込み（GTM より前） |
 | 各 HTML `</body>` 直前 | `consent.js` |
 | 予約リンク | `data-booking-site="jalan|klook|viator"` を付与（仕様 3.4） |
@@ -24,9 +25,9 @@
 | `page_viewed` | 標準 | 全ページ表示時 | `oaiq.js` |
 | `booking_page_view` | カスタム | `booking.html` / `en/booking.html` 表示時（主CV） | `oaiq.js`（パスで判定） |
 | `booking_site_click` | カスタム | `[data-booking-site]` クリック時（参考値） | `oaiq.js` |
-| `appointment_scheduled` | 標準 | 未実装（第2段階・自社サンクスページ整備後） | — |
+| `appointment_scheduled` | 標準 | `thanks.html` / `en/thanks.html` 表示時（予約完了・第2段階） | `oaiq.js`（パスで判定）。`{ type: "customer_action" }`、金額なし。`event_id` をセッション内で固定しリロード時の重複を排除 |
 
-金額は付与しない（仕様 2.4）。
+金額は付与しない（仕様 2.4）。`appointment_scheduled` に金額を付ける場合は、自社予約フォーム等でコース・金額が確定できるようになってから `{ type: "customer_action", amount: 5500, currency: "JPY" }` の形で追加する。
 
 ### 同意の流れ（仕様 3.5）
 
@@ -103,7 +104,7 @@ grep -rl '<YOUR-PIXEL-ID>' --include=*.html . | xargs sed -i 's/<YOUR-PIXEL-ID>/
 |---|---|
 | カスタムイベントの最適化目標への指定可否 | 管理画面で確認 → 不可なら `contents_viewed` 代替 |
 | 予約ページ到達 CPA の許容値 | 未設定 |
-| 自社サンクスページの整備時期 | 未定（`appointment_scheduled` はこれに依存） |
+| サンクスページへの誘導 | ページは整備済み。**じゃらん／Klook／Viator は予約完了後に自社 URL へリダイレクトできないため、現時点では到達経路がない。** 確認メールや予約サイトの「予約後メッセージ」に `https://blankedkyoto.com/thanks.html` を記載して誘導する運用、または自社予約フォーム導入時に完了先として指定する |
 | Google フォームの扱い | 未定 |
 
 ---
@@ -113,3 +114,4 @@ grep -rl '<YOUR-PIXEL-ID>' --include=*.html . | xargs sed -i 's/<YOUR-PIXEL-ID>/
 | 日付 | 内容 |
 |---|---|
 | 2026-10-26 | 初版実装。全 16 ページに Pixel・同意バナー・プライバシーポリシーを設置 |
+| 2026-10-26 | `appointment_scheduled` を実装。`thanks.html` / `en/thanks.html` を新設 |

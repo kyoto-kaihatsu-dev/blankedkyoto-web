@@ -8,6 +8,7 @@
  *   page_viewed        standard   every page
  *   booking_page_view  custom     booking.html / en/booking.html (main CV)
  *   booking_site_click custom     clicks on [data-booking-site] (reference only)
+ *   appointment_scheduled standard thanks.html / en/thanks.html (booking completed, phase 2)
  *
  * Consent
  *   The SDK drops (does not queue) events while consent is false, so we
@@ -77,10 +78,23 @@
   var path = (w.location && w.location.pathname) || '';
   var isBooking = /(^|\/)booking\.html$/.test(path);
 
+  var isThanks = /(^|\/)thanks\.html$/.test(path);
+
   fire('page_viewed', { type: 'contents' });
   if (isBooking) {
     // Main conversion: fires on page view, not on click (spec 3.3)
     fire('custom', { type: 'custom' }, { custom_event_name: 'booking_page_view' });
+  }
+  if (isThanks) {
+    // Booking completed (spec 2.2, phase 2). One event per browser session:
+    // a stable event_id lets the server dedupe reloads of the thanks page.
+    var eid = null;
+    try { eid = w.sessionStorage.getItem('bk_appt_eid'); } catch (e) {}
+    if (!eid) {
+      eid = 'appt-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+      try { w.sessionStorage.setItem('bk_appt_eid', eid); } catch (e) {}
+    }
+    fire('appointment_scheduled', { type: 'customer_action' }, { event_id: eid });
   }
 
   /* ---------- 5. Outbound booking-site clicks (spec 3.4) ---------- */
