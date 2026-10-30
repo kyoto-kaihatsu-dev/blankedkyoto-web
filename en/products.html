@@ -409,13 +409,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<!-- GA4 (direct). TODO: remove once GA4 config tag is live in GTM-NZFVBWSF -->
+<!-- GA4 (direct, event fallback only). page_view is sent by the Google tag in GTM-NZFVBWSF, so send_page_view is disabled here to prevent double counting. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMQTZ40GD4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-TMQTZ40GD4');
+  gtag('config', 'G-TMQTZ40GD4', { 'send_page_view': false });
 </script>
 <script src="/assets/js/analytics.js" defer></script>
 </head>
