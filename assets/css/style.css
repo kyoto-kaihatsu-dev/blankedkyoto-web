@@ -123,3 +123,21 @@ footer { text-align: left; }
   .breadcrumb { margin: -16px 0 24px; }
 }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- consent banner (OpenAI Ads measurement) ---------- */
+.consent {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 200;
+  max-width: 720px; margin: 0 auto;
+  background: #fff; border: 1px solid #e3ded5; box-shadow: 0 6px 24px rgba(43,38,34,.12);
+  padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;
+}
+.consent-text { flex: 1 1 320px; margin: 0; font-size: 13px; line-height: 1.7; color: #5a534b; }
+.consent-text a { text-decoration: underline; }
+.consent-actions { display: flex; gap: 8px; }
+.consent-btn {
+  font: inherit; font-size: 13px; letter-spacing: 0.04em; cursor: pointer;
+  padding: 9px 18px; border: 1px solid #2b2622; background: #faf8f4; color: #2b2622;
+}
+.consent-accept { background: #2b2622; color: #faf8f4; }
+.consent-btn:hover { opacity: 0.8; }
+@media (max-width: 600px) { .consent { left: 8px; right: 8px; bottom: 8px; padding: 14px 16px; } .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
