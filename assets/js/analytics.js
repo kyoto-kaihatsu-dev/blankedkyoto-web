@@ -14,6 +14,13 @@
  * loaded directly on the page. The `window.__BK_GTM_GA4__ = true` flag (set in
  * GTM via a Custom HTML tag, or by removing the gtag snippet from the page)
  * disables the fallback so events are never double counted.
+ *
+ * ChatGPT Ads (OpenAI Measurement Pixel): clicks on booking CTAs (data-cta
+ * starting with "booking") also fire oaiq("measure", "appointment_scheduled")
+ * as the conversion event, because bookings complete on external sites
+ * (Jalan / JapanTicket / Klook / Viator) where the pixel cannot run. The
+ * pixel base code is in each page's <head>; the conversion event must be
+ * defined in ChatGPT Ads Manager against the "appointment_scheduled" event.
  */
 (function () {
   'use strict';
@@ -46,5 +53,8 @@
     var name = el.getAttribute('data-cta');
     if (!name) return;
     send(name, el);
+    if (name.indexOf('booking') === 0 && typeof window.oaiq === 'function') {
+      window.oaiq('measure', 'appointment_scheduled', { type: 'customer_action' });
+    }
   }, { passive: true });
 })();
