@@ -115,7 +115,7 @@ oaiq("init", { pixelId: "XGqATJQY6QYdpXGBZh81wv" });
         "https://blankedkyoto.com/assets/img/photos/iroito-1200.jpg"
       ],
       "logo": "https://blankedkyoto.com/assets/img/logo.svg",
-      "description": "Hand weaving workshop and gauze textile shop in Gion, Kyoto, 30 seconds from Exit 6 of Gion-Shijo Station. Choose from around 30 yarn colours and weave a bookmark, omamori charm or sacoche bag. Indoor, no experience needed, ages 6+, solo guests welcome, English spoken. Operated by Nakamori Co., Ltd.",
+      "description": "Hand weaving workshop and gauze textile shop in Gion, Kyoto, 30 seconds from Exit 6 of Gion-Shijo Station. Choose from around 30 yarn colours and weave a bookmark, omamori charm, sacoche bag or marker charm. Indoor, no experience needed, ages 6+, solo guests welcome, English spoken. Operated by Nakamori Co., Ltd.",
       "telephone": "+81-70-9261-0671",
       "priceRange": "JPY 4,000–13,200",
       "currenciesAccepted": "JPY",
@@ -382,6 +382,54 @@ oaiq("init", { pixelId: "XGqATJQY6QYdpXGBZh81wv" });
       }
     },
     {
+      "@type": "Product",
+      "@id": "https://blankedkyoto.com/en/experience#mejirushi",
+      "name": "Hand Weaving Experience: Marker Charm",
+      "description": "A handwoven marker charm for your umbrella or bag. Choose your favourite colours from around 30 yarns, weave it yourself, and finish it with a leather tab and ring. Also lovely as a matching pair in different colours. Take it home the same day.",
+      "image": [
+        "https://blankedkyoto.com/assets/img/photos/mejirushi-charm-1200.jpg"
+      ],
+      "url": "https://blankedkyoto.com/en/experience#mejirushi",
+      "category": "Hand weaving workshop",
+      "brand": {
+        "@type": "Brand",
+        "name": "BLANKED KYOTO"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Duration",
+          "value": "Approx. 45 minutes"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Minimum age",
+          "value": "6 years and over"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Capacity",
+          "value": "Up to 4 guests per session (all courses combined)"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "5000",
+        "priceCurrency": "JPY",
+        "priceValidUntil": "2027-03-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://blankedkyoto.com/en/booking",
+        "seller": {
+          "@id": "https://blankedkyoto.com/#shop"
+        },
+        "eligibleQuantity": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 4
+        }
+      }
+    },
+    {
       "@type": "WebPage",
       "@id": "https://blankedkyoto.com/en/products#webpage",
       "url": "https://blankedkyoto.com/en/products",
@@ -483,7 +531,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 <p><a class="cta" href="/en/about">About us</a></p>
 
 <h2>What You Can Weave</h2>
-<p>You can also weave your own cloth and take it home as a bookmark, omamori charm or sacoche bag.</p>
+<p>You can also weave your own cloth and take it home as a bookmark, omamori charm, sacoche bag or marker charm.</p>
 <div class="grid">
 <figure>
 <picture>
@@ -506,7 +554,15 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </picture>
 <figcaption>Sacoche bag / approx. 120 min · ¥13,200</figcaption>
 </figure>
+<figure>
+<picture>
+<source type="image/webp" srcset="/assets/img/photos/mejirushi-charm-600.webp 600w, /assets/img/photos/mejirushi-charm-1200.webp 1200w, /assets/img/photos/mejirushi-charm-1800.webp 1800w" sizes="(max-width: 600px) 100vw, 436px">
+<img src="/assets/img/photos/mejirushi-charm-1200.jpg" alt="Three handwoven marker charms in different colours" width="1200" height="670" decoding="async" loading="lazy">
+</picture>
+<figcaption>Marker charm / approx. 45 min · ¥5,000</figcaption>
+</figure>
 </div>
+<p class="note">Marker charm: December pair campaign — two people for ¥8,000 (regular price for two: ¥10,000).</p>
 <p><a class="cta" href="/en/experience">See the experience</a> <a class="cta" href="/en/booking">Book now</a></p>
 </main>
 
