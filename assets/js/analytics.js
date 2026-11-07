@@ -1,19 +1,20 @@
 /*
  * BLANKED KYOTO – CTA click tracking
  *
- * Pushes a `cta_click` event to window.dataLayer for every click on an element
+ * Sends a `cta_click` event directly via gtag() for every click on an element
  * carrying a data-cta attribute (booking_jalan, booking_viator, booking_klook,
- * tel, instagram, map, online_store, ...).
+ * tel, instagram, map, online_store, ...), with cta_name, cta_language and
+ * cta_href as event parameters.
  *
- * GTM setup (one-time):
- *   Trigger : Custom Event  – event name "cta_click"
- *   Tag     : GA4 Event     – event name {{Event}} / params cta_name, cta_language
- *   Variables: Data Layer Variable "cta_name", "cta_language"
- *
- * Until the GTM tag exists, the same event is also sent via gtag() when GA4 is
- * loaded directly on the page. The `window.__BK_GTM_GA4__ = true` flag (set in
- * GTM via a Custom HTML tag, or by removing the gtag snippet from the page)
- * disables the fallback so events are never double counted.
+ * History / why direct-only (fixed 2026-11-07):
+ *   This script used to also push the event to window.dataLayer. GTM container
+ *   GTM-NZFVBWSF contains a generic GA4 event tag (part of a Meta Conversions
+ *   API template set) that forwards every dataLayer custom event to GA4, but
+ *   without the cta_* parameters — so each click was counted multiple times
+ *   and almost all events showed cta_name as (not set). The dataLayer push was
+ *   removed so gtag() is the single path for cta_click. Likewise, page_view is
+ *   sent only by the gtag('config') in each page's <head>; the Google tag in
+ *   GTM has send_page_view disabled so nothing is double counted.
  *
  * ChatGPT Ads (OpenAI Measurement Pixel): clicks on booking CTAs (data-cta
  * starting with "booking") also fire oaiq("measure", "appointment_scheduled")
@@ -28,21 +29,11 @@
   var lang = (document.documentElement.lang || 'ja').toLowerCase();
 
   function send(name, el) {
-    var payload = {
-      event: 'cta_click',
-      cta_name: name,
-      cta_language: lang,
-      cta_href: el.getAttribute('href') || '',
-      cta_text: (el.textContent || '').trim().slice(0, 80)
-    };
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(payload);
-
-    if (!window.__BK_GTM_GA4__ && typeof window.gtag === 'function') {
+    if (typeof window.gtag === 'function') {
       window.gtag('event', 'cta_click', {
         cta_name: name,
         cta_language: lang,
-        cta_href: payload.cta_href
+        cta_href: el.getAttribute('href') || ''
       });
     }
   }

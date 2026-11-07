@@ -474,13 +474,13 @@ oaiq("init", { pixelId: "XGqATJQY6QYdpXGBZh81wv" });
 }
 </script>
 
-<!-- GA4 (direct, event fallback only). page_view is sent by the Google tag in GTM-NZFVBWSF, so send_page_view is disabled here to prevent double counting. -->
+<!-- GA4 (direct). This snippet is the single source for page_view and cta_click; GTM-NZFVBWSF's Google tag has send_page_view disabled to prevent double counting. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMQTZ40GD4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-TMQTZ40GD4', { 'send_page_view': false });
+  gtag('config', 'G-TMQTZ40GD4');
 </script>
 <script src="/assets/js/analytics.js" defer></script>
 </head>
