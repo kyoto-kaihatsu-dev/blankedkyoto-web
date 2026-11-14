@@ -65,6 +65,9 @@ th { width: 34%; color: #7a736a; font-size: 15px; }
 .follow-item p { font-size: 14px; color: #7a736a; margin-bottom: 12px; }
 .follow-item .follow-id { font-size: 12px; margin: 4px 0 0; }
 
+.ig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0 8px; }
+.ig-grid .instagram-media { margin: 0 auto !important; width: 100% !important; min-width: 0 !important; max-width: 540px !important; }
+
 footer {
   border-top: 1px solid #e3ded5;
   padding: 32px;
