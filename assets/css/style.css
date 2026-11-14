@@ -60,6 +60,11 @@ th { width: 34%; color: #7a736a; font-size: 15px; }
 }
 .cta:hover { background: #2b2622; color: #faf8f4; }
 
+.follow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin: 24px 0 40px; }
+.follow-item h3 { font-size: 16px; letter-spacing: 0.06em; margin-bottom: 8px; }
+.follow-item p { font-size: 14px; color: #7a736a; margin-bottom: 12px; }
+.follow-item .follow-id { font-size: 12px; margin: 4px 0 0; }
+
 footer {
   border-top: 1px solid #e3ded5;
   padding: 32px;
