@@ -142,4 +142,24 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/products"/>
 </url>
 
+<url>
+  <loc>https://blankedkyoto.com/gion-guide</loc>
+  <lastmod>2026-11-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/gion-guide"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/gion-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/gion-guide"/>
+</url>
+
+<url>
+  <loc>https://blankedkyoto.com/en/gion-guide</loc>
+  <lastmod>2026-11-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="ja" href="https://blankedkyoto.com/gion-guide"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://blankedkyoto.com/en/gion-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://blankedkyoto.com/gion-guide"/>
+</url>
+
 </urlset>
