@@ -131,3 +131,10 @@ footer { text-align: left; }
   .breadcrumb { margin: -16px 0 24px; }
 }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Availability grid (booking pages) */
+.avail-table th, .avail-table td { text-align: center; }
+.avail-table td.avail-open { color: #2e7d32; font-weight: 700; }
+.avail-table td.avail-few { color: #e65100; font-weight: 700; }
+.avail-table td.avail-full { color: #b71c1c; }
+.avail-table td.avail-closed, .avail-table td.avail-past { color: #999; }

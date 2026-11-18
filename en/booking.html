@@ -321,6 +321,41 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </p>
 <p class="note">Course options, start times and prices may differ between platforms. Please check the details on the booking page before you reserve. Japanese speakers can also book on <a href="https://www.jalan.net/activity/official/spt_guide000000231178/" target="_blank" rel="noopener" data-cta="booking_jalan">Jalan.net</a>.</p>
 
+<h2>Availability</h2>
+<div id="availability" hidden>
+<table class="avail-table">
+<thead><tr><th scope="col">Date</th><th scope="col">10:00</th><th scope="col">12:00</th><th scope="col">14:00</th><th scope="col">16:00</th><th scope="col">18:00</th></tr></thead>
+<tbody id="availability-body"></tbody>
+</table>
+<p class="note">&#9675; Available / &#9651; Few left / &#215; Full / &#8722; Closed or finished. Availability is a guide, updated about every 10 minutes. Bookings made by phone or in person may not be reflected. <span id="availability-updated"></span></p>
+</div>
+<script>
+(function(){
+  var url='https://docs.google.com/spreadsheets/d/13Sf9AFWWBn5lRiq-O4ewVdhCx5qPrrww3vnrO9Bfxuo/gviz/tq?tqx=out:json&sheet=%E7%A9%BA%E3%81%8D%E7%8A%B6%E6%B3%81';
+  fetch(url).then(function(r){return r.text();}).then(function(t){
+    var json=JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
+    var rows=json.table.rows; if(!rows||rows.length<3) return;
+    var sym={open:'\u25cb',few:'\u25b3',full:'\u00d7',closed:'\u2212',past:'\u2212'};
+    var wmap={'月':'Mon','火':'Tue','水':'Wed','木':'Thu','金':'Fri','土':'Sat','日':'Sun'};
+    var tb=document.getElementById('availability-body'); var html='';
+    for(var i=2;i<rows.length;i++){
+      var c=rows[i].c; if(!c||!c[0]||!c[0].v) continue;
+      var d=String(c[0].v); var w=c[1]?String(c[1].v||''):'';
+      if(wmap) w=wmap[w]||w;
+      html+='<tr><th scope="row">'+d.substring(5).replace('-','/')+' ('+w+')</th>';
+      for(var j=2;j<=6;j++){ var s=c[j]?String(c[j].v||''):''; html+='<td class="avail-'+s+'">'+(sym[s]||'\u2212')+'</td>'; }
+      html+='</tr>';
+    }
+    if(!html) return;
+    tb.innerHTML=html;
+    document.getElementById('availability').hidden=false;
+    var gen=rows[0].c[1]&&rows[0].c[1].v?String(rows[0].c[1].v):'';
+    var u=document.getElementById('availability-updated');
+    if(u&&gen) u.textContent='('+gen.replace('T',' ').substring(0,16)+')';
+  }).catch(function(){});
+})();
+</script>
+
 <h2>Courses and Start Times</h2>
 <table>
 <tr><th scope="row">Bookmark</th><td>approx. 30 min · ¥4,000<br>10:00 / 12:00 / 14:00 / 16:00 / 18:00</td></tr>
@@ -328,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 <tr><th scope="row">Sacoche bag</th><td>approx. 120 min · ¥13,200<br>10:00 / 12:00 / 14:00 / 16:00 / 18:00</td></tr>
 <tr><th scope="row">Marker charm</th><td>approx. 45 min · ¥5,000<br>10:00 / 12:00 / 14:00 / 16:00 / 18:00</td></tr>
 </table>
-<p class="note">Marker charm: December pair campaign — two people for ¥8,000 (regular price for two: ¥10,000), until the end of December.</p>
+<p class="note">Marker charm: November–December pair campaign — two people for ¥8,000 (regular price for two: ¥10,000), Nov 8 – Dec 31.</p>
 <p class="note">Prices include tax. Up to 4 guests per session across all courses. Open 10:00–19:00 (last entry 18:00). Closed Tuesdays and Wednesdays (open on public holidays); occasional closures.</p>
 
 <h2>Deadlines and On the Day</h2>

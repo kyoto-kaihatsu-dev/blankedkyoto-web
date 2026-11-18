@@ -323,6 +323,41 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 </p>
 <p class="note">予約サイトによって、コース構成・開催時刻・表示価格が異なる場合があります。ご予約前に各サイトの詳細をご確認ください。</p>
 
+<h2>空き状況</h2>
+<div id="availability" hidden>
+<table class="avail-table">
+<thead><tr><th scope="col">日付</th><th scope="col">10:00</th><th scope="col">12:00</th><th scope="col">14:00</th><th scope="col">16:00</th><th scope="col">18:00</th></tr></thead>
+<tbody id="availability-body"></tbody>
+</table>
+<p class="note">○ 空きあり／△ 残りわずか／× 満席／− 定休日・終了。空き状況は目安です（約10分ごとに更新）。お電話・店頭でのご予約分は反映されない場合があります。<span id="availability-updated"></span></p>
+</div>
+<script>
+(function(){
+  var url='https://docs.google.com/spreadsheets/d/13Sf9AFWWBn5lRiq-O4ewVdhCx5qPrrww3vnrO9Bfxuo/gviz/tq?tqx=out:json&sheet=%E7%A9%BA%E3%81%8D%E7%8A%B6%E6%B3%81';
+  fetch(url).then(function(r){return r.text();}).then(function(t){
+    var json=JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
+    var rows=json.table.rows; if(!rows||rows.length<3) return;
+    var sym={open:'\u25cb',few:'\u25b3',full:'\u00d7',closed:'\u2212',past:'\u2212'};
+    var wmap=null;
+    var tb=document.getElementById('availability-body'); var html='';
+    for(var i=2;i<rows.length;i++){
+      var c=rows[i].c; if(!c||!c[0]||!c[0].v) continue;
+      var d=String(c[0].v); var w=c[1]?String(c[1].v||''):'';
+      if(wmap) w=wmap[w]||w;
+      html+='<tr><th scope="row">'+d.substring(5).replace('-','/')+' ('+w+')</th>';
+      for(var j=2;j<=6;j++){ var s=c[j]?String(c[j].v||''):''; html+='<td class="avail-'+s+'">'+(sym[s]||'\u2212')+'</td>'; }
+      html+='</tr>';
+    }
+    if(!html) return;
+    tb.innerHTML=html;
+    document.getElementById('availability').hidden=false;
+    var gen=rows[0].c[1]&&rows[0].c[1].v?String(rows[0].c[1].v):'';
+    var u=document.getElementById('availability-updated');
+    if(u&&gen) u.textContent='('+gen.replace('T',' ').substring(0,16)+')';
+  }).catch(function(){});
+})();
+</script>
+
 <h2>コースと開催時間</h2>
 <table>
 <tr><th scope="row">しおり</th><td>約30分／4,000円<br>10:00・12:00・14:00・16:00・18:00</td></tr>
@@ -330,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
 <tr><th scope="row">サコッシュ</th><td>約120分／13,200円<br>10:00・12:00・14:00・16:00・18:00</td></tr>
 <tr><th scope="row">目印チャーム</th><td>約45分／5,000円<br>10:00・12:00・14:00・16:00・18:00</td></tr>
 </table>
-<p class="note">目印チャームは12月限定ペアキャンペーン中です。通常2名10,000円 → 12月限定で2名8,000円。</p>
+<p class="note">目印チャームは11月・12月限定ペアキャンペーン中です。通常2名10,000円 → 2名8,000円（11月8日〜12月31日）。</p>
 <p class="note">価格は税込。営業時間 10:00〜19:00（最終受付 18:00）。定休日は火曜・水曜（祝日の場合は営業）、不定休を含みます。</p>
 
 <h2>予約の締切・当日の流れ</h2>
